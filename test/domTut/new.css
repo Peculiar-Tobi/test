@@ -1,0 +1,343 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 2rem;
+    background-color: rgba(194, 194, 164, 0.486);
+
+}
+.container{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background-image: url("./touse2.jpeg");
+    height: 100vh;
+    margin-bottom: 5rem;
+    /* ccreate the parallax effect scrolling */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+
+}
+.first, .second, .third{
+    width: 100%;
+    height: 100vh;
+    position:absolute;
+    top: 30px;
+
+}
+
+
+
+.first{
+    color: white;
+    background-color: rgb(56, 78, 78);
+    padding: 1rem;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    letter-spacing: .15em;
+    animation: typing 5s steps(30,end),
+    blink-caret .5s step-end infinite;
+    
+}
+
+@keyframes typing{
+    from {width: 0}
+    to {width: 100%}
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% { border-color: rgb(26, 26, 211)
+    }
+}
+
+
+.third{
+    max-width: 350px;
+    height: 252px;
+    background-color: rgb(10, 121, 121);
+    border-radius: 10px;
+    margin: 1.5rem;
+    padding: 1rem;
+    z-index: -11;
+    /* box-shadow: 2px 2px 40px rgb(10, 121, 121); */
+}
+.second{
+    background-color: rgb(17, 68, 68);
+    max-width: 400px;
+    height: 235px;
+    
+    margin: 2rem;
+    border-radius: 10px;
+    z-index: -1;
+    /* box-shadow: 2px 2px 40px rgb(25, 95, 72);  */
+}
+
+.first:hover{
+    transform: translateY(-20px);
+    font-size: 20px;
+    line-height: 30px;
+    cursor:pointer;
+    box-shadow: 2px 2px 50px rgb(25, 95, 72); 
+}
+
+
+
+
+.contains{
+    
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3rem;
+    width: 100%;
+    margin: auto;
+    background-image: url("./touse1.jpeg");
+    max-height: 100%;
+
+    /* ccreate the parallax effect scrolling */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{ 
+    display: block;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Helvetica;
+    width: 50%;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 1px grey;
+    clear:right;
+    opacity: .7;
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    animation: moveup 1s infinite alternate;
+
+}
+@keyframes moveup{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+span{
+    float: right;
+    color: red;
+    animation: glow 3s infinite;  
+}
+
+@keyframes glow{
+    20% {
+        color: red;
+    }
+    50% {
+        color: rgb(8, 178, 245);
+    }
+    100%{
+        color: rgba(18, 230, 18, 0.74);
+    }
+}
+
+.vic{
+    height: 100vh;
+}
+/* .one, .two, .three, .four{
+    position: absolute;
+}
+
+.one{
+    border: 1px solid red;
+    width: 5px;
+    height: 250px;
+    background-color: aqua;
+}
+.two, .three, .four{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 50px;
+    border-radius: 50px;
+    background-color: rgb(32, 41, 41);
+} */
+ul.progress-bar{
+    max-width: 29em;
+    width: 100%;
+    padding: 0 18px;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 12px; /*change font size only to scale*/
+}
+ul.progress-bar li{
+    width: 25%;
+    float: left;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+ul.progress-bar li span{
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #8ac148;
+    height: .4em;
+    z-index: -1;
+}
+
+ul.progress-bar li.activated:before{
+    background: #fff;
+    border: 0.3em solid #8ac148;
+    box-sizing: border-box;
+}
+
+ul.progress-bar li:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #8ac148;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    z-index: 2;
+}
+
+ul.progress-bar li:last-child::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -2em;
+    top: 0;
+    background: #8ac148;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    z-index: 2;
+}
+
+.lightgrey{
+    margin: 1rem;
+    border: 2px solid grey;
+    width: 50%;
+    border-radius: 2px;
+}
+.onee{
+    width: 25%;
+    background-color: #8ac148;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(32, 21, 1);
+}
+.twoo{
+    width: 50%;
+    background-color: #8ac148;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(32, 21, 1)
+
+}
+
+/* vertical progress bar */
+.wrapper{
+    width: 330px;
+    font-family: 'helvetica';
+    font-size: 14px;
+}
+.step-progress{
+    position: relative;
+    padding-left: 45px;
+    list-style: none;
+}
+.step-progress::before{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 10px;
+    height: 100%;
+}
+.step-progress-item{
+    position: relative;
+    counter-increment: list;
+}
+.step-progress-item:not(:last-child){
+    padding-bottom: 20px;
+}
+.step-progress-item::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -37px;
+    width: 20px;
+    height:20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.step-progress-item .is-done::before {
+    border-left: 2px solid #8ac148;
+}
+.step-progress-item.is-done::after{
+    content: '✔';
+    font-size: 13px;
+    color: #FFF;
+    text-align: center;
+    border: 2px solid #8ac148;
+    background-color: #8ac148;
+}
+.step-progress-item.current::before{
+    border-left: 2px solid #8ac148;
+}
+.step-progress-item.current::after{
+    content: counter(list);
+    padding-top: 1px;
+    width: 25px;
+    height: 25px;
+    top: -4px;
+    left: -40px;
+    font-size: 14px;
+    text-align: center;
+    color: #8ac148;
+    border: 2px solid #8ac148;
+    background-color: white;
+}
+
+.step-progress strong {
+    display: block;
+}

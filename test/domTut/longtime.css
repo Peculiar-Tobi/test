@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: .5rem;
+    background-image: url("./touse1.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#Cover{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    top:50%;
+    left:50%;
+    position:fixed;
+    transform: translate(-50%,-50%);
+    border: 3px solid aqua;
+    border-radius: 1rem;
+    background-color: aqua;
+    opacity: 0.7;
+    font-size: 20px;
+    font-weight: bold;
+    animation: moveup 3s ;
+    visibility: hidden;
+}
+
+#akuna{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    border: 3px solid aqua;
+    border-radius: 1rem;
+    background-color: aqua;
+    opacity: 0.7;
+    font-size: 20px;
+    font-weight: bold;
+    animation: moveup 3s; 
+    box-shadow: 2px 2px 1px grey;
+}
+
+.close{
+    visibility: hidden;
+    font-weight: bold;
+    font-size: large;
+    padding: .3rem;
+    position: absolute ;
+    top: 35%;
+    left: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 2px 2px black;
+}
+.close:hover{
+    cursor: pointer;
+}
+.closer{
+    
+    font-weight: bold;
+    font-size: large;
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 2px 2px black;
+}
+.menu{
+    display: inline-block;
+    visibility: hidden;
+    padding: .4em;
+    width: 250px;
+}
+.menu li{
+    list-style-type: none;
+    padding: .4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 1px solid aqua;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    box-shadow: 2px 2px 1px grey;
+    
+} 
+.menu li:hover{
+    cursor: pointer;
+    background-color: #000000;
+    opacity: .7;
+    color: white;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+}
+menu li a:hover{
+    color: white;
+}
+.menu-grid:hover, .closer:hover{
+    cursor: pointer;
+}
+.menu-grid{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    
+
+}
+@media(min-width: 600px){
+    .close{
+        top: 35%;
+        left: 70%;
+    }
+}
+@media(max-width: 600px){
+    .close{
+        top: 30%;
+        left: 70%;
+    }
+    .menu-grid{
+        display: block;
+    }
+}
